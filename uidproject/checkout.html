@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Checkout | Glitch</title>
+  <meta name="description" content="Complete your purchase at Glitch">
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/fonts/font.css">
+
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <style>
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+    
+    .input-field {
+      transition: border-color 0.3s ease;
+    }
+    
+    .input-field:focus {
+      border-color: var(--text-orange-crayola);
+      outline: none;
+    }
+ 
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1; 
+    }
+
+  
+    .header,main,.footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    
+    .checkout-form {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" data-header style="background-color: white;">
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/image.png" width="132" height="27" alt="shoppie home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="./index.html" class="navbar-link">Home</a></li>
+          <li><a href="./products-list.html" class="navbar-link">Shop</a></li>
+          <li><a href="signin.html" class="navbar-link" target="_self">Sign In</a></li>
+        </ul>
+
+        <button class="cart-btn">
+          <ion-icon name="bag" aria-hidden="true"></ion-icon>
+          <span class="span">Cart</span>
+        </button>
+
+        <a href="#" class="btn">Contact Us</a>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="./assets/images/bgvideo.mp4" type="video/mp4">
+  </video>
+
+  <main>
+    <section class="section checkout">
+      <div class="container">
+        <h2 class="h2 section-title title text-center" style="background-color: antiquewhite;">Checkout</h2>
+        
+        <div class="checkout-form" style="max-width: 800px; margin: 0 auto;">
+          <div style="background-color: var(--bg-white); border: 2px solid var(--border-eerie-black); box-shadow: var(--shadow-2); padding: 40px; margin-bottom: 30px;">
+            <h3 class="h3 title" style="margin-bottom: 30px;">Billing Information</h3>
+            
+            <form id="checkout-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="grid-column: 1/3;">
+                  <label for="name" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">Full Name</label>
+                  <input type="text" id="name" required class="input-field" style="width: 100%; margin-bottom: 10px;">
+                  <p class="error-message" id="name-error"></p>
+                </div>
+                
+                <div>
+                  <label for="email" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">Email Address</label>
+                  <input type="email" id="email" required class="input-field" style="width: 100%; margin-bottom: 10px;">
+                  <p class="error-message" id="email-error"></p>
+                </div>
+                
+                <div>
+                  <label for="phone" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">Phone Number</label>
+                  <input type="tel" id="phone" required class="input-field" style="width: 100%; margin-bottom: 10px;" placeholder="10-digit number">
+                  <p class="error-message" id="phone-error"></p>
+                </div>
+                
+                <div style="grid-column: 1/3;">
+                  <label for="address" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">Shipping Address</label>
+                  <textarea id="address" required rows="4" class="input-field" style="width: 100%; margin-bottom: 10px; resize: vertical;"></textarea>
+                  <p class="error-message" id="address-error"></p>
+                </div>
+                
+                <div>
+                  <label for="city" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">City</label>
+                  <input type="text" id="city" required class="input-field" style="width: 100%; margin-bottom: 10px;">
+                  <p class="error-message" id="city-error"></p>
+                </div>
+                
+                <div>
+                  <label for="state" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">State</label>
+                  <input type="text" id="state" required class="input-field" style="width: 100%; margin-bottom: 10px;">
+                  <p class="error-message" id="state-error"></p>
+                </div>
+                
+                <div>
+                  <label for="zip" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">PIN Code</label>
+                  <input type="text" id="zip" required class="input-field" style="width: 100%; margin-bottom: 10px;" placeholder="6-digit PIN code">
+                  <p class="error-message" id="zip-error"></p>
+                </div>
+                
+                <div>
+                  <label for="country" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">Country</label>
+                  <input type="text" id="country" required class="input-field" style="width: 100%; margin-bottom: 10px;">
+                  <p class="error-message" id="country-error"></p>
+                </div>
+                
+                <div style="grid-column: 1/3;">
+                  <label for="payment" style="display: block; font-weight: var(--weight-semiBold); margin-bottom: 10px;">Payment Method</label>
+                  <select id="payment" required class="input-field" style="width: 100%; margin-bottom: 10px; padding: 15px 30px; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill=\"black\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>'); background-repeat: no-repeat; background-position: right 10px center;">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="google-pay">Google Pay</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="upi">UPI</option>
+                  </select>
+                  <p class="error-message" id="payment-error"></p>
+                </div>
+              </div>
+              
+              <p class="error-message" id="form-error" style="text-align: center; margin-top: 20px;"></p>
+              
+              <div style="margin-top: 30px; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <h3 class="h4" style="margin-bottom: 10px;">Order Total</h3>
+                  <div class="price" style="font-size: var(--fontSize-3);">₹<span id="checkout-total">8,918</span></div>
+                </div>
+                
+                <button type="submit" class="btn btn-secondary" style="font-size: var(--fontSize-8);">
+                  Complete Purchase
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/images/image.png" width="132" height="27" loading="lazy" alt="shoppie home">
+          </a>
+
+          <p class="footer-text">
+            Have fun shopping at Glitch!
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title title">Contact us</p>
+            <address class="footer-text">
+              Glitch & Co.,<br>
+              123/10 Race Course,<br>
+              Gandhipuram,<br>
+              Coimbatore,<br>
+              Tamil Nadu, INDIA.
+            </address>
+          </li>
+          <li>
+            <a href="mailto:support@glitch.com" class="email">support@glitch.com</a>
+          </li>
+          <li>
+            <a href="tel:+91 85852 12165" class="call">+91 85852 12165</a>
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <p class="footer-list-title title">Subscribe to our fashion newsletter!</p>
+          <form>
+            <input type="email" name="email_address" placeholder="Enter your email address" required autocomplete="off" class="input-field">
+            <button class="btn btn-secondary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="wrapper">
+          <div class="link-wrapper">
+            <a href="#" class="footer-bottom-link">Our Team</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="copyright">
+          &copy; 2025 Arun, Harshith, Niranjan. <i>All Rights Reserved.</i>
+        </p>
+      </div>
+
+      <img src="./assets/images/footer-shape-1.png" width="245" height="165" loading="lazy" alt="shape" class="shape shape-1">
+      <img src="./assets/images/footer-shape-2.png" width="138" height="316" loading="lazy" alt="shape" class="shape shape-2">
+      <img src="./assets/images/footer-shape-3.png" width="346" height="92" loading="lazy" alt="shape" class="shape shape-3">
+    </div>
+  </footer>
+
+  <!-- Custom JS Link -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/checkout.js"></script>
+  <script src="./assets/js/cart.js"></script>
+
+  <!-- Ion Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Order History | Glitch</title>
+  <meta name="description" content="View your order history at Glitch">
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Google Font Links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/fonts/font.css">
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/image.png" width="132" height="27" alt="shoppie home" style="height: 50px;width: 200px; border-radius: 20px; border: 2px solid red;">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="#" class="navbar-link">Home</a></li>
+          <li><a href="./products-list.html" class="navbar-link">Shop</a></li>
+          <li><a href="./signin.html" class="navbar-link" target="_self">Sign In</a></li>
+        </ul>
+
+          <a href="./cart.html">
+        <button class="cart-btn">
+          <ion-icon name="bag" aria-hidden="true"></ion-icon>
+          <span class="span">Cart</span>
+        </button></a>
+
+        <a href="#" class="btn">Contact Us</a>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+  <br> <br> <br><br>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="product-detail" style="background-color: yellow;">
+      <div class="container">
+        <h1 class="h2 title text-center">Your Order History</h1>
+        <p class="text-center" style="margin-bottom: 30px;">View and track all your previous orders</p>
+        
+        <div id="order-history-container">
+          <!-- Orders will be loaded here via JavaScript -->
+          <p class="text-center" id="no-orders-message" style="display: none;">You don't have any orders yet. </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/images/image.png" width="132" height="27" loading="lazy" alt="shoppie home" style="height: 100px; width: 400px; border-radius: 50px; border: 2px solid blue;">
+          </a>
+
+          <p class="footer-text">
+            Have fun shopping at Glitch ! 
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title title">Contact us</p>
+            <address class="footer-text">
+              Glitch & Co.,<br>
+              123/10 Race Course,<br>
+              Gandhipuram,<br>
+              Coimbatore,<br>
+              Tamil Nadu, INDIA.
+            </address>
+          </li>
+          <li>
+            <a href="mailto:support@glitch.com" class="email">support@glitch.com</a>
+          </li>
+          <li>
+            <a href="tel:+91 85852 12165" class="call">+91 85852 12165</a>
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <p class="footer-list-title title">Subscribe to our fashion newsletter !</p>
+          <form>
+            <input type="email" name="email_address" placeholder="Enter your email address" required autocomplete="off" class="input-field">
+            <button class="btn btn-secondary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="wrapper">
+          <div class="link-wrapper">
+            <a href="#" class="footer-bottom-link">Our Team</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="copyright">
+          &copy; 2025 Arun , Harshith , Niranjan.<i> All Rights Reserved.</i>
+        </p>
+      </div>
+
+      <img src="./assets/images/footer-shape-1.png" width="245" height="165" loading="lazy" alt="shape" class="shape shape-1">
+      <img src="./assets/images/footer-shape-2.png" width="138" height="316" loading="lazy" alt="shape" class="shape shape-2">
+      <img src="./assets/images/footer-shape-3.png" width="346" height="92" loading="lazy" alt="shape" class="shape shape-3">
+    </div>
+  </footer>
+
+  <!-- Custom JS Link -->
+  <script src="./assets/js/script.js"></script>
+  
+  <!-- Order History JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load order history from localStorage
+      displayOrderHistory();
+      
+      function displayOrderHistory() {
+        const orderHistoryContainer = document.getElementById('order-history-container');
+        const noOrdersMessage = document.getElementById('no-orders-message');
+        const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+        
+        // Clear container
+        orderHistoryContainer.innerHTML = '';
+        
+        if (orderHistory.length === 0) {
+          // Show no orders message
+          noOrdersMessage.style.display = 'block';
+          return;
+        }
+        
+        // Hide no orders message
+        noOrdersMessage.style.display = 'none';
+        
+        // Create order cards
+        orderHistory.forEach(order => {
+          const orderCard = createOrderCard(order);
+          orderHistoryContainer.appendChild(orderCard);
+        });
+      }
+      
+      function createOrderCard(order) {
+        const orderCard = document.createElement('div');
+        orderCard.className = 'product-card';
+        orderCard.style.border = '2px solid var(--border-eerie-black)';
+        orderCard.style.padding = '20px';
+        orderCard.style.marginBottom = '30px';
+        orderCard.style.backgroundColor = 'var(--bg-white)';
+        orderCard.style.boxShadow = 'var(--shadow-2)';
+        
+        // Format date
+        const orderDate = new Date(order.orderDate);
+        const formattedDate = orderDate.toLocaleDateString('en-IN', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        
+        // Create order header
+        const orderHeader = document.createElement('div');
+        orderHeader.style.display = 'flex';
+        orderHeader.style.justifyContent = 'space-between';
+        orderHeader.style.marginBottom = '15px';
+        orderHeader.style.borderBottom = '1px solid var(--bg-gainsboro)';
+        orderHeader.style.paddingBottom = '10px';
+        
+        orderHeader.innerHTML = `
+          <div>
+            <h3 class="h4 title">Order ID: ${order.orderId}</h3>
+            <p style="font-size: var(--fontSize-9);">Date: ${formattedDate}</p>
+          </div>
+          <div>
+            <p style="font-size: var(--fontSize-8); text-align: right;">Status: <span style="color: var(--text-orange-crayola); font-weight: var(--weight-semiBold);">${order.status}</span></p>
+            <p style="font-size: var(--fontSize-8); text-align: right;">Total: ₹ <span style="font-weight: var(--weight-semiBold);">${order.totalAmount}</span></p>
+          </div>
+        `;
+        
+        orderCard.appendChild(orderHeader);
+        
+        // Create items container
+        const itemsContainer = document.createElement('div');
+        itemsContainer.style.display = 'flex';
+        itemsContainer.style.flexWrap = 'wrap';
+        itemsContainer.style.gap = '20px';
+        
+        // Add items
+        order.items.forEach(item => {
+          const itemCard = document.createElement('div');
+          itemCard.style.width = '150px';
+          
+          // Use a placeholder image if no image is available
+          const imageUrl = item.image || 'https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Naruto_1_54rFQUr.jpg?format=webp&w=480&dpr=1.3';
+          
+          itemCard.innerHTML = `
+            <figure class="img-holder" style="--width: 150; --height: 150;">
+              <img src="${imageUrl}" width="150" height="150" alt="${item.name}" class="img-cover" style="border: 1px solid var(--border-eerie-black);">
+            </figure>
+            <h4 style="font-size: var(--fontSize-9); margin-top: 10px; text-align: center;">${item.name}</h4>
+            <p style="font-size: var(--fontSize-9); color: var(--text-orange-crayola); text-align: center;">₹ ${item.price}</p>
+          `;
+          
+          itemsContainer.appendChild(itemCard);
+        });
+        
+        orderCard.appendChild(itemsContainer);
+        
+        // Create shipping details
+        const shippingDetails = document.createElement('div');
+        shippingDetails.style.marginTop = '20px';
+        shippingDetails.style.padding = '10px';
+        shippingDetails.style.backgroundColor = 'var(--bg-gainsboro)';
+        shippingDetails.style.fontSize = 'var(--fontSize-9)';
+        
+        shippingDetails.innerHTML = `
+          <p><strong>Shipping Address:</strong> ${order.address}, ${order.city}, ${order.state}, ${order.zip}, ${order.country}</p>
+          <p><strong>Contact:</strong> ${order.name} | ${order.phone} | ${order.email}</p>
+          <p><strong>Payment Method:</strong> ${order.paymentMethod}</p>
+        `;
+        
+        orderCard.appendChild(shippingDetails);
+        
+        return orderCard;
+      }
+      
+    });
+  </script>
+
+  <!-- Ion Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

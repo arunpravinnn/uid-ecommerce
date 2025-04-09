@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Glitch</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <style>
+        /* Contact Page Background */
+        .contact-section {
+            padding: 75px 16px;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contact Form Styling */
+        .contact-container {
+            max-width: 600px;
+            background-color: var(--bg-white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-1);
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: var(--fontSize-3);
+            color: var(--text-eerie-black);
+            margin-bottom: 20px;
+        }
+
+        .contact-container label {
+            display: block;
+            font-size: var(--fontSize-9);
+            font-weight: var(--weight-semiBold);
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-eerie-black);
+            border-radius: 5px;
+            font-size: var(--fontSize-9);
+            outline: none;
+            transition: var(--transition-1);
+        }
+
+        .contact-container input:focus,
+        .contact-container textarea:focus {
+            border-color: var(--text-orange-crayola);
+        }
+
+        .contact-container textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-container button {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--bg-orange-crayola);
+            color: var(--bg-white);
+            font-size: var(--fontSize-8);
+            font-weight: var(--weight-semiBold);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: var(--transition-1);
+        }
+
+        .contact-container button:hover {
+            background-color: var(--text-blue-crayola);
+        }
+
+        .response-message {
+            margin-top: 15px;
+            font-size: var(--fontSize-9);
+            color: green;
+            font-weight: var(--weight-semiBold);
+        }
+
+        /* Fixed Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background-color: transparent;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+        }
+
+        .header.scrolled {
+            background-color: var(--bg-white);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-link {
+            font-size: var(--fontSize-9);
+            font-weight: var(--weight-semiBold);
+            transition: color 0.3s ease;
+        }
+
+        .navbar-link:hover {
+            color: var(--text-orange-crayola);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/image.png" width="132" height="27" alt="Glitch Home">
+            </a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="index.html" class="navbar-link">Home</a></li>
+                    <li><a href="products-list.html" class="navbar-link">Shop</a></li>
+                    <li><a href="signin.html" class="navbar-link">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="response-message" class="response-message"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/images/image.png" width="132" height="27" loading="lazy" alt="Glitch Home">
+                    </a>
+                    <p class="footer-text">Have fun shopping at Glitch!</p>
+                </div>
+                
+                <!-- New Contact Information Section -->
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title title">Contact us</p>
+                        <address class="footer-text">
+                            Glitch & Co.,<br>
+                            123/10 Race Course,<br>
+                            Gandhipuram,<br>
+                            Coimbatore,<br>
+                            Tamil Nadu, INDIA.
+                        </address>
+                    </li>
+                    <li>
+                        <a href="mailto:support@glitch.com" class="email">support@glitch.com</a>
+                    </li>
+                    <li>
+                        <a href="tel:+918585212165" class="call">+91 85852 12165</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="footer-bottom-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2025 Arun, Harshith, Niranjan. <i>All Rights Reserved.</i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Sticky Header & Form Submission -->
+    <script>
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector(".header");
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("response-message").innerText = "Thank you for contacting us!";
+        });
+    </script>
+
+</body>
+</html>

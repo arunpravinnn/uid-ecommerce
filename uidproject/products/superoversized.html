@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Anime T-shirt - Product Details | Glitch</title>
+  <meta name="description" content="Detailed product page for Nike Dunk Pro sneakers">
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Google Font Links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/fonts/font.css">
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Preload Images -->
+  <link rel="preload" as="image" href="../assets/images/product-10.png">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="../assets/images/image.png" width="132" height="27" alt="shoppie home" style="height: 50px;width: 200px; border-radius: 20px; border: 2px solid red;">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link">Home</a></li>
+          <li><a href="../products-list.html" class="navbar-link">Shop</a></li>
+          <li><a href="../signin.html" class="navbar-link" target="_self">Sign In</a></li>
+        </ul>
+
+        <a href="../cart.html">
+            <button class="cart-btn">
+              <ion-icon name="bag" aria-hidden="true"></ion-icon>
+              <span class="span">Cart</span>
+            </button></a>
+    
+            <a href="../contactus.html" class="btn">Contact Us</a>
+          </nav>
+
+      <button class="nav-open-btn" aria-label="toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+  <br> <br> <br><br>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="product-detail" style="background-color: yellow;">
+      <div class="container">
+        <div class="product-grid">
+          <!-- Product Gallery -->
+          <div class="product-gallery">
+            <figure class="img-holder" style="--width: 600; --height: 600;">
+              <img src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1741869882_7521759.jpg?format=webp&w=480&dpr=1.3" width="600" height="600" loading="lazy" alt="Nike Dunk Pro" class="img-cover" 
+              style="border: 2px solid black;">
+            </figure>
+
+            <div class="product-thumbnails">
+              <img src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1741869882_7521759.jpg?format=webp&w=480&dpr=1.3" alt="Nike Dunk Pro Thumbnail 1" class="thumbnail active">
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="product-details">
+            <h1 class="h2 title">Super Oversized T-shirt</h1>
+
+            <div class="product-rating">
+              <div class="stars">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <span>(4.0 / 5.0)</span>
+            </div>
+
+            <div class="product-price">
+              <span class="price" style="color: red;">₹ 999.00</span>
+              <span class="sale-price">₹ 1,299.00</span>
+            </div>
+
+            <p class="product-description">
+              Unleash your inner shinobi with this officially licensed Naruto-themed apparel from The Souled Store. Designed for true anime fans, this product features high-quality fabric, vibrant prints, and an ultra-comfortable fit. Whether you're a fan of Naruto, Sasuke, or the entire Hidden Leaf Village, this stylish piece lets you rep your love for the series in the coolest way possible.
+            </p>
+
+            <div class="product-variants">
+              <div class="variant-group">
+                <h3 class="h4">Size</h3>
+                <div class="variant-options">
+                  <button class="variant-btn" onclick="alert('Size 6 Chosen.')">UK 6</button>
+                  <button class="variant-btn" onclick="alert('Size 7 Chosen.')">UK 7</button>
+                  <button class="variant-btn" onclick="alert('Size 8 Chosen.')">UK 8</button>
+                  <button class="variant-btn" onclick="alert('Size 9 Chosen.')">UK 9</button>
+                </div>
+              </div>
+
+              <div class="variant-group">
+                <h3 class="h4">Color</h3>
+                <div class="variant-options">
+                  <button class="color-btn" style="background-color: #000000;" title="Black"></button>
+                  <button class="color-btn active" style="background-color: #FFFFFF;" title="White"></button>
+                  <button class="color-btn" style="background-color: #0000FF;" title="Blue"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-actions">
+              <div class="quantity-control">
+                <button class="quantity-btn">-</button>
+                <input type="text" class="quantity-input" value="1" readonly>
+                <button class="quantity-btn">+</button>
+              </div>
+
+              <a href="#" class="btn btn-primary" onclick="addToCart({ name: 'Super OverSized T Shirt', price: 999, image: 'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1741869882_7521759.jpg?format=webp&w=480&dpr=1.3' })">
+                <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                <span class="span">Add To Cart</span>
+            </a>
+            </div>
+
+            <div class="product-extra-info">
+              <div class="info-item">
+                <ion-icon name="shield-checkmark"></ion-icon>
+                <span>Secure Payment</span>
+              </div>
+              <div class="info-item">
+                <ion-icon name="sync"></ion-icon>
+                <span>7 Days Return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-additional-info">
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="description">Description</button>
+            <button class="tab-btn" data-tab="specifications">Specifications</button>
+            <button class="tab-btn" data-tab="reviews">Reviews</button>
+          </div>
+
+          <div class="tab-content active" id="description">
+            <h3 class="h3">Product Description</h3>
+            <ul class="description-list">
+              <li>Premium cotton fabric for all-day comfort</li>
+              <li>Oversized fit for a relaxed, streetwear vibe</li>
+              <li> High-quality print that won’t fade easily</li>
+              <li>Officially licensed Marvel merchandise</li>
+              
+            </ul>
+          </div>
+
+          <div class="tab-content" id="specifications">
+            <h3 class="h3">Technical Specifications</h3>
+            <ul class="description-list">
+              <li>Material: Leather and Synthetic</li>
+              <li>Closure: Lace-up</li>
+              <li>Sole Material: Rubber</li>
+              <li>Available Sizes: UK 6 - UK 11</li>
+              <li>Weight: Approximately 350g per shoe</li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="reviews">
+            <div class="review-summary">
+              <div class="overall-rating">
+                <span class="rating-number">4.0 / 5.0</span>
+                <p><b>Arun :</b> These Shoes are amazing. I love them. They are very comfortable and stylish. I would recommend them to everyone. ★★★★★</p>
+                <p><b>Amrita :</b> There are slight issues with the size. But overall, the shoes are good.But, I would recommend them to everyone. ★★★★☆</p>
+                <p><b>Tejhashwini :</b> The shoes are very comfortable and stylish. I would recommend them to everyone. They are very stylish and colorful.★★★★★</p>
+                <p><b>Niranjan :</b> The shoes are not up to the mark! The quality feels subpar, and they don't provide the comfort I was expecting. ★★☆☆☆</p>
+                <span>Based on 124 Reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="related-products">
+          <h2 class="h2 section-title title text-center">Related Products</h2>
+          <ul class="product-list has-scrollbar">
+            <li class="scrollbar-item">
+              <div class="product-card text-center">
+                <div class="card-banner">
+                  <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                    <img src="https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/marvel_1.jpg?format=webp&w=480&dpr=1.3" width="448" height="470" loading="lazy" alt="Jordan 7" class="img-cover">
+                  </figure>
+                  <a href="marvel.html" class="btn product-btn">
+                    <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                    <span class="span">View Details</span>
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3 class="h4 title">
+                    <a href="marvel.html" class="card-title">Marvel T-shirt</a>
+                  </h3>
+                  <span class="blackprice">₹ 2100.00</span>
+                </div>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="product-card text-center">
+                <div class="card-banner">
+                  <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                    <img src="https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/DC_1.jpg?format=webp&w=480&dpr=1.3" width="448" height="470" loading="lazy" alt="Nike Force" class="img-cover">
+                  </figure>
+                  <a href="batman.html" class="btn product-btn">
+                    <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                    <span class="span">Add To Cart</span>
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3 class="h4 title">
+                    <a href="batman.html" class="card-title">Batman T-shirt</a>
+                  </h3>
+                  <span class="blackprice">₹ 900.00</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="../assets/images/image.png" width="132" height="27" loading="lazy" alt="shoppie home" style="height: 100px; width: 400px; border-radius: 50px; border: 2px solid blue;">
+          </a>
+
+          <p class="footer-text">
+            Have fun shopping at Glitch ! 
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title title">Contact us</p>
+            <address class="footer-text">
+              Glitch & Co.,<br>
+              123/10 Race Course,<br>
+              Gandhipuram,<br>
+              Coimbatore,<br>
+              Tamil Nadu, INDIA.
+            </address>
+          </li>
+          <li>
+            <a href="mailto:support@glitch.com" class="email">support@glitch.com</a>
+          </li>
+          <li>
+            <a href="tel:+91 85852 12165" class="call">+91 85852 12165</a>
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <p class="footer-list-title title">Subscribe to our fashion newsletter !</p>
+          <form>
+            <input type="email" name="email_address" placeholder="Enter your email address" required autocomplete="off" class="input-field">
+            <button class="btn btn-secondary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">>
+        <p class="copyright">
+          &copy; 2025 Arun , Harshith , Niranjan.<i> All Rights Reserved.</i>
+        </p>
+      </div>
+
+      <img src="../assets/images/footer-shape-1.png" width="245" height="165" loading="lazy" alt="shape" class="shape shape-1">
+      <img src="../assets/images/footer-shape-2.png" width="138" height="316" loading="lazy" alt="shape" class="shape shape-2">
+      <img src="../assets/images/footer-shape-3.png" width="346" height="92" loading="lazy" alt="shape" class="shape shape-3">
+    </div>
+  </footer>
+
+  <!-- Custom JS Link -->
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/cart.js"></script>
+
+  <!-- Ion Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Tab Functionality
+    document.querySelectorAll('.tab-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+        
+        // Remove active class from all buttons and tab contents
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding tab content
+        button.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Quantity Control
+    const quantityInput = document.querySelector('.quantity-input');
+    const quantityBtns = document.querySelectorAll('.quantity-btn');
+
+    quantityBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value);
+        if (btn.textContent === '+') {
+          quantityInput.value = currentValue + 1;
+        } else if (btn.textContent === '-' && currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

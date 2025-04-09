@@ -1,0 +1,164 @@
+/**
+ * Sign In Page Specific Styles
+ */
+
+.sign-in {
+  background-color: var(--bg-wild-blue-yonder);
+  padding-block: 100px;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sign-in-card {
+  max-width: 500px;
+  width: 100%;
+  margin-inline: auto;
+  background-color: var(--bg-white);
+  border: 2px solid var(--border-eerie-black);
+  box-shadow: var(--shadow-2);
+  padding: 50px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sign-in-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-family: var(--fontFamily-clashDisplay);
+  font-weight: var(--weight-semiBold);
+  font-size: var(--fontSize-8);
+  color: var(--text-eerie-black);
+}
+
+.form-group input {
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-2);
+  padding: 15px 30px;
+  border: 2px solid var(--border-eerie-black);
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+  border-color: var(--text-blue-crayola);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-eerie-black);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+  color: var(--text-blue-crayola);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.forgot-password {
+  font-size: var(--fontSize-9);
+  font-weight: var(--weight-semiBold);
+  color: var(--text-blue-crayola);
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--bg-orange-crayola);
+  text-decoration: underline;
+}
+
+.sign-in-form .btn {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-in-form .btn:hover {
+  background-color: var(--bg-orange-crayola);
+  color: var(--bg-white);
+  transform: scale(1.02);
+}
+
+.sign-in-form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sign-up-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: var(--fontSize-8);
+}
+
+.sign-up-link .link {
+  color: var(--text-blue-crayola);
+  font-weight: var(--weight-semiBold);
+  transition: color 0.3s ease;
+}
+
+.sign-up-link .link:hover {
+  color: var(--bg-orange-crayola);
+  text-decoration: underline;
+}
+
+.password-strength {
+  font-size: var(--fontSize-9);
+  margin-top: 5px;
+  text-align: right;
+  transition: color 0.3s ease;
+}
+
+
+
+@media (max-width: 576px) {
+  .sign-in-card {
+    padding: 30px 20px;
+    margin: 0 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .sign-in-card {
+    padding: 80px 50px;
+  }
+}
+.form-group .error-message {
+  color: #ff3333;
+  font-size: var(--fontSize-9);
+  margin-top: 5px;
+  font-weight: var(--weight-medium);
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Shoppie - Create Account</title>
+  <meta name="title" content="Shoppie - Create Account">
+  <meta name="description" content="Create a new Shoppie account">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/fonts/font.css">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    .auth-section {
+      padding-block: 100px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-wild-blue-yonder);
+    }
+
+    .auth-container {
+      max-width: 550px;
+      width: 100%;
+      padding: 40px;
+      background-color: var(--bg-white);
+      border: 2px solid var(--border-eerie-black);
+      box-shadow: var(--shadow-2);
+    }
+
+    .auth-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: var(--weight-semiBold);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid var(--border-eerie-black);
+      box-shadow: var(--shadow-3);
+      transition: var(--transition-1);
+    }
+
+    .form-input:focus {
+      box-shadow: none;
+      border-color: var(--text-orange-crayola);
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    .auth-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .auth-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .auth-link {
+      text-align: center;
+      display: block;
+      margin-top: 20px;
+      color: var(--text-blue-crayola);
+      font-weight: var(--weight-semiBold);
+      transition: var(--transition-1);
+    }
+
+    .auth-link:hover {
+      color: var(--text-orange-crayola);
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .password-requirements {
+      font-size: 14px;
+      margin-top: 5px;
+      color: var(--text-eerie-black);
+    }
+
+    .password-requirements ul {
+      margin-top: 5px;
+      padding-left: 20px;
+    }
+
+    .password-requirements li {
+      list-style-type: disc;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/image.png" width="132" height="27" alt="shoppie home" style="height: 50px;width: 200px; border-radius: 20px; border: 2px solid red;">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="products-list.html" class="navbar-link">Shop</a>
+          </li>
+
+          <li>
+            <a href="signin.html" class="navbar-link" target="_self">Sign In</a>
+          </li>
+
+        </ul>
+        <a href="./cart.html">
+        <button class="cart-btn">
+          <ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+          <span class="span">Cart</span>
+        </button></a>
+
+        <a href="#" class="btn">Contact Us</a>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+<br><br><br>
+  <main>
+    <section class="auth-section">
+      <div class="auth-container">
+        <h2 class="h2 auth-title title">Create Account</h2>
+
+        <form id="create-account-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" required>
+              <p class="error-message" id="firstName-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Enter your last name" required>
+              <p class="error-message" id="lastName-error"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+            <p class="error-message" id="email-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-input" placeholder="Create a password" required>
+            <div class="password-requirements">
+              Password must contain:
+              <ul>
+                <li>At least 8 characters</li>
+                <li>At least one uppercase letter</li>
+                <li>At least one lowercase letter</li>
+                <li>At least one number</li>
+                <li>At least one special character (!@#$%^&*)</li>
+              </ul>
+            </div>
+            <p class="error-message" id="password-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Confirm your password" required>
+            <p class="error-message" id="confirmPassword-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number">
+            <p class="error-message" id="phone-error"></p>
+          </div>
+
+          <p class="error-message" id="form-error"></p>
+
+          <div class="auth-actions">
+            <button type="submit" class="btn btn-secondary auth-btn">
+              <span class="span">Create Account</span>
+            </button>
+          </div>
+        </form>
+
+        <a href="signin.html" class="auth-link">Already have an account? Sign in</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/image.png" width="132" height="27" loading="lazy" alt="shoppie home" style="height: 100px; width: 400px; border-radius: 50px; border: 2px solid blue;">
+          </a>
+
+          <p class="footer-text">
+            Have fun shopping at Glitch ! 
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title title">Contact us</p>
+
+            <address class="footer-text">
+              Glitch & Co.,<br>
+              123/10 Race Course,<br>
+              Gandhipuram,<br>
+              Coimbatore,<br>
+              Tamil Nadu, INDIA.
+            </address>
+          </li>
+
+          <li>
+            <a href="mailto:support@glitch.com" class="email">support@glitch.com</a>
+          </li>
+
+          <li>
+            <a href="tel:+91 85852 12165" class="call">+91 85852 12165</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title title">Subscribe to our fashion newsletter !</p>
+            <form>
+          <input type="email" name="email_address" placeholder="Enter your email address" required autocomplete="off"
+            class="input-field">
+
+          <button class="btn btn-secondary" type="submit">Subscribe</button>
+        </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Arun , Harshith , Niranjan.<i> All Rights Reserved.</i>
+        </p>
+
+      </div>
+
+      <img src="./assets/images/footer-shape-1.png" width="245" height="165" loading="lazy" alt="shape"
+        class="shape shape-1">
+
+      <img src="./assets/images/footer-shape-2.png" width="138" height="316" loading="lazy" alt="shape"
+        class="shape shape-2">
+
+      <img src="./assets/images/footer-shape-3.png" width="346" height="92" loading="lazy" alt="shape"
+        class="shape shape-3">
+
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/auth.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
