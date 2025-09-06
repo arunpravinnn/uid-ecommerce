@@ -1,4 +1,5 @@
 **Glitch & Co. – E-Commerce Website**
+Vercel Deployment : glitch-ecru.vercel.app/
 
 Project Overview :
 
