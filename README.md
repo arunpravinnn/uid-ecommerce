@@ -21,28 +21,22 @@ The website provides a basic shopping experience with product browsing, cart man
 **Tech Stack**:
 
 Frontend: HTML, CSS, JavaScript
-
 Storage: Browser Local Storage
 
 **How to Run**:
 
 Clone the repository:
-
-git clone https://github.com/arunpravinnn/uid-ecommerce.git
+'git clone https://github.com/arunpravinnn/uid-ecommerce.git'
 
 
 Navigate to the project folder:
+'cd uid-ecommerce/uidproject'
 
-cd uid-ecommerce/uidproject
-
-
-Open index.html in your browser.
+Open 'index.html' in your browser.
 
 
 
 **Academic Context**:
-
 Course: 23CSE113 – User Interface Design
-
-Institution: Amrita Vishwa Vidyapeetham , Semester Project
+Institution: Amrita Vishwa Vidyapeetham , Semester II Project
 
