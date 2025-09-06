@@ -1,6 +1,6 @@
 **Glitch & Co. – E-Commerce Website**
 
-_ Project Overview : _
+Project Overview :
 
 This project was developed as part of the 23CSE113 – User Interface Design course.
 Glitch & Co. is a simple, responsive e-commerce website that demonstrates modern UI/UX principles while using only HTML, CSS, and JavaScript.
@@ -27,11 +27,11 @@ Storage: Browser Local Storage
 **How to Run**:
 
 Clone the repository:
-'git clone https://github.com/arunpravinnn/uid-ecommerce.git'
+'''git clone https://github.com/arunpravinnn/uid-ecommerce.git'''
 
 
 Navigate to the project folder:
-'cd uid-ecommerce/uidproject'
+'''cd uid-ecommerce/uidproject'''
 
 Open 'index.html' in your browser.
 
