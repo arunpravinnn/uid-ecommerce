@@ -1,6 +1,6 @@
 **Glitch & Co. – E-Commerce Website**
 
-_** Project Overview : **_
+_ Project Overview : _
 
 This project was developed as part of the 23CSE113 – User Interface Design course.
 Glitch & Co. is a simple, responsive e-commerce website that demonstrates modern UI/UX principles while using only HTML, CSS, and JavaScript.
@@ -39,5 +39,6 @@ Open 'index.html' in your browser.
 
 **Academic Context**:
 Course: 23CSE113 – User Interface Design
+
 Institution: Amrita Vishwa Vidyapeetham , Semester II Project
 
